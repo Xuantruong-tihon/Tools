@@ -1,0 +1,4 @@
+directory,startpoint,endpoint,slack,launch_clock,capture_clock
+scan_chain_rx0/hold_check,U_RX0_FF3/Q,U_RX0_FF4/D,-0.451,clk_rx0,clk_rx0
+scan_chain_cr/setup_check,U_CR_FF1/Q,U_CR_FF2/D,-0.512,clk_cr,clk_cr
+scan_chain_cr/setup_check,U_CR_FF5/Q,U_CR_FF6/D,-0.834,clk_cr,clk_cr

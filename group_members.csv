@@ -1,0 +1,5 @@
+startpoint,endpoint,slack,launch_clock,capture_clock
+U_CR_FF1/Q,U_CR_FF2/D,-0.512,clk_cr,clk_cr
+U_CR_FF3/Q,U_CR_FF4/D,-0.120,clk_cr,clk_cr
+U_CR_FF5/Q,U_CR_FF6/D,-0.834,clk_cr,clk_cr
+U_CR_FF7/Q,U_CR_FF8/D,0.045,clk_cr,clk_cr
