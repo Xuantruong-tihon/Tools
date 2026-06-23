@@ -5,22 +5,21 @@ Công cụ dòng lệnh để quét đệ quy một thư mục báo cáo lớn, 
 lọc ra các vi phạm slack **nặng hơn một ngưỡng cho phép**, và xuất thành **một file CSV tổng hợp 
 duy nhất** — dễ mở bằng Excel, sort, hoặc đưa vào báo cáo.
 
-## 1. Cấu trúc bộ tool
+## 1. Cấu trúc thư mục thực tế
 
 ```
 slack_violation_scanner/
-├── collect_data.py              # Script chính, chạy bằng CLI
-├── README.md                    # Tài liệu này
-├── sample_data/
-│   └── output_reports/          # Thư mục input MẪU (giả lập report thực tế)
+├── collect_data.py              # Script chính thực hiện quét report và tổng hợp dữ liệu sau khi lọc quét
+├── output_reports/              # Thư mục input MẪU (giả lập report thực tế)
 │       ├── scan_chain_cr/setup_check/
 │       │   ├── group_summary.csv
 │       │   └── group_members.csv
+│       │   └── .....
 │       └── scan_chain_rx0/hold_check/
 │           ├── group_summary.csv
 │           └── group_members.csv
-└── sample_output/
-    └── sorted_critical_violations.csv   # Output MẪU sau khi chạy thử
+│           └── .....
+└── sorted_critical_violations.csv   # Output MẪU sau khi chạy script
 ```
 
 > Trong thực tế, `output_reports/` có thể có rất nhiều cấp thư mục
