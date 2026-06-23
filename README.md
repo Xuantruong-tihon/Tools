@@ -1,10 +1,9 @@
 # Slack Violation Scanner
 
-Công cụ dòng lệnh để quét đệ quy một thư mục báo cáo lớn (ví dụ kết quả
-clock-group / timing analysis từ PnR/STA), tìm tất cả các thư mục con chứa
-cặp file `group_summary.csv` + `group_members.csv`, lọc ra các vi phạm slack
-**nặng hơn một ngưỡng cho phép**, và xuất thành **một file CSV tổng hợp duy
-nhất** — dễ mở bằng Excel, sort, hoặc đưa vào báo cáo.
+Công cụ dòng lệnh để quét đệ quy một thư mục báo cáo lớn, tìm tất cả các thư mục con nằm rải rác 
+ở các cấp nhỏ hơn thư mục báo cáo này và chứa cặp file `group_summary.csv` + `group_members.csv`, 
+lọc ra các vi phạm slack **nặng hơn một ngưỡng cho phép**, và xuất thành **một file CSV tổng hợp 
+duy nhất** — dễ mở bằng Excel, sort, hoặc đưa vào báo cáo.
 
 ## 1. Cấu trúc bộ tool
 
@@ -24,7 +23,7 @@ slack_violation_scanner/
     └── sorted_critical_violations.csv   # Output MẪU sau khi chạy thử
 ```
 
-> Trong thực tế, `output_reports/` của bạn có thể có rất nhiều cấp thư mục
+> Trong thực tế, `output_reports/` có thể có rất nhiều cấp thư mục
 > con lồng nhau (vd: `output_reports/<block>/<corner>/<group>/...`) — script
 > không quan tâm độ sâu, nó dùng `os.walk()` để tự động duyệt hết.
 
