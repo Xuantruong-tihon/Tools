@@ -126,15 +126,14 @@ theo `launch_clock`, hoặc paste vào báo cáo/email.
   giá trị nhưng định dạng số khác nhau (ví dụ `-0.40` vs `-0.4`) thì sẽ
   **không khớp**. Nếu gặp tình huống này trong dữ liệu thực tế, có thể cần
   chuẩn hóa định dạng số trước khi so sánh (so sánh bằng `float` thay vì
-  chuỗi) — báo lại nếu cần mình bổ sung phần này.
+  chuỗi).
 - **Nhiều cấp thư mục lồng nhau**: không cần chỉnh gì, `os.walk()` xử lý
   mọi độ sâu tự động.
 - **File rất lớn / rất nhiều thư mục**: script đọc từng file theo dòng
   (streaming qua `csv.DictReader`), không load toàn bộ vào RAM một lúc, nên
   phù hợp với report tree lớn.
 
-## 6. Mở rộng trong tương lai (gợi ý)
-
+## 6. Mở rộng trong tương lai 
 - Thêm tham số `--recursive-depth` nếu muốn giới hạn độ sâu quét.
 - Thêm so sánh slack bằng `float` thay vì chuỗi để tránh lệch định dạng số.
 - Thêm cột `group_name` (lấy từ `group_summary.csv`) vào output để biết rõ
